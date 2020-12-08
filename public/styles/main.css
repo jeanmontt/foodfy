@@ -2,7 +2,8 @@
 
 :root {
     --color-text: #111111;
-    --color-primary: #FBDFDB;
+    --color-primary: hsl(8, 80%, 92%);
+    --color-grey: #777777;
 }
 
 * {
@@ -33,9 +34,9 @@ header .logo img {
 }
 
 header .logo img:hover {
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
     transition: 300ms;
 }
 
@@ -49,6 +50,7 @@ header .links a {
 
 header .links a:hover {
     border-bottom: 0.125rem solid var(--color-primary);
+    opacity: 0.8;
 }
 
 footer {

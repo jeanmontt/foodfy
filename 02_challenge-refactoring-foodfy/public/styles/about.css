@@ -5,6 +5,7 @@ header a:first-child {
 #content {
     width: 58.75rem;
     margin: 0 auto;
+    text-align: justify;
 }
 
 #content h1 {

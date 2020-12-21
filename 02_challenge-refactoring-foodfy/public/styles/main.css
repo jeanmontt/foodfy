@@ -4,6 +4,7 @@
     --color-text: #111111;
     --color-primary: hsl(8, 80%, 92%);
     --color-grey: #777777;
+    --color-grey-light: #999999;
 }
 
 * {
@@ -63,7 +64,7 @@ footer {
 }
 
 footer p {
-    color: #999999;
+    color: var(--color-grey-light);
     font-size: 0.88rem;
     line-height: 1rem;
 }

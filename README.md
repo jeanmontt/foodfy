@@ -29,7 +29,7 @@
 ## 📑️ Etapas do desafio:
 
 1. [Construindo Foodfy](https://github.com/jeanmontt/foodfy/tree/master/01_challenge-building-foodfy) ✔️
-2. Refatorando Foodfy 🚧️
+2. [Refatorando Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy) ✔️
 3. Admin Foody 🚧️
 4. Persistindo dados do Foodfy 🚧️
 5. Upload de imagens 🚧️
@@ -47,11 +47,26 @@
 
 Nesta etapa foi entregue o layout e assets para realizar a construção do front-end das páginas Home, Sobre, Receitas, além da construção do modal da página Receitas.
 
+---
+
+## 2️⃣️ [Refatorando Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy)
+
+<h1>
+<img src="assets/foodfy2.gif" alt="Gif demonstrativo challenge 1 Foodfy">
+</h1>
+
+Nesta etapa foi solicitado o refatoramento de algumas partes do código, criação do servidor, iniciação do banco de dados, eliminação do modal e redirecionamento para página específica da receita e inclusão de algumas funcionalidades.
+
+---
+
 ### 🚀️ Tecnologias utilizadas:
 
 - HTML
 - CSS
 - JavaScript
+- Node.js
+- Express
+- Nunjucks
 
 ---
 

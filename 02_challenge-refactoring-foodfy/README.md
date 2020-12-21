@@ -26,6 +26,12 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
+## 👨🏻‍💻 Resultado do desafio
+
+<h1>
+<img src="../assets/foodfy2.gif" alt="Gif demonstrativo challenge 1 Foodfy">
+</h1>
+
 ## :rocket: Sobre o desafio
 
 Nesse desafio você irá refatorar, ou seja, reescrever algumas partes, do seu código do desafio anterior, o Foodfy.

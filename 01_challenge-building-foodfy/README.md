@@ -10,13 +10,15 @@
 
 <p align="center">
 
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%23F8952D">
+  <a href="https://github.com/jeanmontt">
+    <img alt="Made by jeanmontt" src="https://img.shields.io/badge/made%20by-jeanmontt-blue">
   </a>
 
-  <a href="LICENSE" >
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
+  <a href="https://github.com/jeanmontt/foodfy/commits/master" >
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/jeanmontt/foodfy">
   </a>
+
+</p>
 
 </p>
 
@@ -107,4 +109,10 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para
 
 ---
 
-Feito com :purple_heart: by [Rocketseat](https://rocketseat.com.br) :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+#### Desenvolvido com 💙️ por:
+
+***Jean Monteiro*** 
+<br/> 
+<a href="https://www.linkedin.com/in/jeanmont/">
+<img src="https://raw.githubusercontent.com/jeanmontt/NLW-1.0/master/public/assets/linkedin.png">
+</a>

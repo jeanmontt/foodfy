@@ -1,0 +1,87 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/admin/index.css">
+
+  <title>Foodfy - Administração</title>
+{% endblock head %}
+
+{% block content %}
+  <section class="content">
+    <h1>Gerenciar receitas</h1>
+
+    <div class="cards">
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[0].image }}" alt="{{ data[0].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[0].title }}</h2>
+          <p>{{ data[0].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[1].image }}" alt="{{ data[1].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[1].title }}</h2>
+          <p>{{ data[1].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[2].image }}" alt="{{ data[2].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[2].title }}</h2>
+          <p>{{ data[2].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[3].image }}" alt="{{ data[3].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[3].title }}</h2>
+          <p>{{ data[3].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[4].image }}" alt="{{ data[4].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[4].title }}</h2>
+          <p>{{ data[4].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="{{ data[5].image }}" alt="{{ data[5].title }}">          
+        </div>
+
+        <div class="info">
+          <h2>{{ data[5].title }}</h2>
+          <p>{{ data[5].author }}</p>
+          <a href="">Visualizar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}

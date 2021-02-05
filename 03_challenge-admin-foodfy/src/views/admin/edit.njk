@@ -1,0 +1,53 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/admin/edit.css">
+
+  <title>Foodfy - Editando receita {{ data.title }}</title>
+{% endblock head %}
+
+{% block content %}
+  <section class="container">
+    <div class="header">
+      <h1>Editando receita: {{ data.title }}</h1>
+
+      <div class="buttons">
+        <a href="" class="delete">Deletar</a>
+        <a href="" class="save">Salvar receita</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="image">
+        <h2>Imagem da receita</h2>
+
+        <input type="url" name="image" placeholder="http://">
+      </div>
+
+      <div class="ingredients">
+        <h2>Ingredientes</h2>
+
+        <input type="text" name="ingredients" placeholder="Digite os ingredientes">
+        <input type="text" name="ingredients" placeholder="Digite os ingredientes">
+
+        <a href="">Adicionar novo ingrediente</a>
+      </div>
+
+      <div class="preparation">
+        <h2>Modo de preparo</h2>
+
+        <input type="text" name="preparation" placeholder="Digite o modo de preparo">
+        <input type="text" name="ingredients" placeholder="Digite o modo de preparo">
+
+        <a href="">Adicionar novo passo</a>
+      </div>
+
+      <div class="extra_info">
+        <h2>Informações adicionais</h2>
+
+        <textarea name="information" cols="30" rows="8"></textarea>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

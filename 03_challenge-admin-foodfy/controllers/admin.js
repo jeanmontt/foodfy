@@ -4,9 +4,9 @@ exports.index = (req, res) => {
   return res.render("admin/index", { data });
 };
 
-// exports.create = (req, res) => {
-
-// };
+exports.create = (req, res) => {
+  res.render("admin/create");
+};
 
 exports.show = (req, res) => {
   const recipeIndex = req.params.id;

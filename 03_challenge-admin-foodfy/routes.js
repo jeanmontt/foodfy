@@ -9,7 +9,7 @@ routes.get("/receitas", home.recipes);
 routes.get("/receitas/:id", home.recipe);
 
 routes.get("/admin/receitas", admin.index);
-// routes.get("/admin/receitas/create", admin.create);
+routes.get("/admin/receitas/nova", admin.create);
 routes.get("/admin/receitas/:id", admin.show);
 routes.get("/admin/receitas/:id/editar", admin.edit);
 // routes.post("/admin/receitas", admin.post);

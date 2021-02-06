@@ -1,0 +1,91 @@
+.container {
+  width: 58.75rem;
+  margin: 3.44rem auto;
+}
+
+.form-delete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.63rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+button {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.19rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.save {
+  background-color: var(--color-button);
+  padding: 0.55rem 1.26rem;
+}
+
+button.delete {
+  background-color: #DC4747;
+  padding: 0.55rem 1.26rem;
+  margin: 0 10rem -2.3125rem 0;
+}
+
+button:hover {
+  opacity: 0.9;
+  transition: 300ms;
+}
+
+.content h2 {
+  font-size: 1rem;
+  line-height: 1.19rem;
+  margin-bottom: 0.63rem;
+}
+
+.content input,
+.content textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.94rem 1.25rem;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.19rem;
+}
+
+.content .ingredients input,
+.content .preparation input {
+  margin-bottom: 0.63rem;
+}
+
+.content .image,
+.content .ingredients,
+.content .preparation {
+  margin-bottom: 1.88rem;
+}
+
+button.new-ingredient,
+button.new-preparation {
+  color: var(--color-button);
+  background-color: white;
+  margin-top: 0.3125rem;
+  font-size: 1rem;
+  line-height: 1.19rem;
+  font-weight: bold;
+}
+
+.content textarea {
+  line-height: 1.5rem;
+  padding: 1.13rem 1.25rem;
+}

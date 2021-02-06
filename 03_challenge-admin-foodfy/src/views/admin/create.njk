@@ -3,18 +3,14 @@
 {% block head %}
   <link rel="stylesheet" href="/styles/admin/create-edit.css">
 
-  <title>Foodfy - Editando receita: {{ data.title }}</title>
+  <title>Foodfy - Criando receita</title>
 {% endblock head %}
 
 {% block content %}
   <section class="container">
-    <form class="form-delete" action="/admin/receitas" method="post">
-      <button class="delete" type="submit">Deletar</button>
-    </form>
-
     <form action="/admin/receitas" method="post">
       <div class="header">
-        <h1>Editando receita: {{ data.title }}</h1>
+        <h1>Criando receita</h1>
 
         <button class="save" type="submit">Salvar receita</button>
       </div>

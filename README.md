@@ -30,7 +30,7 @@
 
 1. [Construindo Foodfy](https://github.com/jeanmontt/foodfy/tree/master/01_challenge-building-foodfy) ✔️
 2. [Refatorando Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy) ✔️
-3. Admin Foody 🚧️
+3. [Admin Foody](https://github.com/jeanmontt/foodfy/tree/master/03_challenge-admin-foodfy) 🚧️
 4. Persistindo dados do Foodfy 🚧️
 5. Upload de imagens 🚧️
 6. Apresentação e organização das receitas no Foodfy 🚧️

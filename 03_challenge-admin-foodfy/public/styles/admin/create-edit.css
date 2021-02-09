@@ -62,16 +62,15 @@ button:hover {
   border-radius: 4px;
   font-size: 1rem;
   line-height: 1.19rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-.content .ingredients input,
-.content .preparation input {
-  margin-bottom: 0.63rem;
+.content #ingredients input,
+.content #preparations input {
+  margin-bottom: 0.94rem;
 }
 
-.content .image,
-.content .ingredients,
-.content .preparation {
+.content .image {
   margin-bottom: 1.88rem;
 }
 
@@ -79,13 +78,15 @@ button.new-ingredient,
 button.new-preparation {
   color: var(--color-button);
   background-color: white;
-  margin-top: 0.3125rem;
+  margin-bottom: 1.88rem;
   font-size: 1rem;
   line-height: 1.19rem;
   font-weight: bold;
+  outline: none;
 }
 
 .content textarea {
   line-height: 1.5rem;
+  text-align: justify;
   padding: 1.13rem 1.25rem;
 }

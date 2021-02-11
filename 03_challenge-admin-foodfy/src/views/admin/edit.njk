@@ -8,15 +8,19 @@
 
 {% block content %}
   <section class="container">
-    <form class="form-delete" action="/admin/receitas" method="post">
+    <form class="form-delete" action="/admin/receitas?_method=DELETE" method="POST">
       <button class="delete" type="submit">Deletar</button>
+      
+      <input type="hidden" name="id" value="{{ data.id }}">
     </form>
 
-    <form action="/admin/receitas" method="post">
+    <form action="/admin/receitas?_method=PUT" method="POST">
       <div class="header">
         <h1>Editando receita: {{ data.title }}</h1>
 
         <button class="save" type="submit">Salvar receita</button>
+
+        <input type="hidden" name="id" value="{{ data.id }}">
       </div>
 
       {% include "admin/fields.njk" %}

@@ -70,7 +70,9 @@ button:hover {
   margin-bottom: 0.94rem;
 }
 
-.content .image {
+.content .image,
+.content .title,
+.content .author {
   margin-bottom: 1.88rem;
 }
 

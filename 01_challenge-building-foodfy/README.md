@@ -64,10 +64,6 @@ Acesse a pasta `layouts/assets` para obter todas imagens utilizadas no layout.
 1. Dê uma boa olhada no material extra de CSS & HTML, esse material pode conter dicas importantes para você construir o layout desse website;
 2. Na página de receitas, quando o usuário clica em uma receita, um modal deve aparecer em tela contendo as mesmas informações da receita que ele clicou;
 
-## :calendar: Entrega
-
-Esse desafio **não precisa ser entregue** e não receberá correção. Após concluí-lo, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
-
 ## 💾️ Como baixar/testar o projeto
 
 - Você irá precisar instalar o [Git](https://git-scm.com/), [NodeJS](https://nodejs.org/pt-br/download/) + [npm](https://www.npmjs.com/get-npm):

@@ -30,7 +30,7 @@
 
 1. [Construindo Foodfy](https://github.com/jeanmontt/foodfy/tree/master/01_challenge-building-foodfy) ✔️
 2. [Refatorando Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy) ✔️
-3. [Admin Foody](https://github.com/jeanmontt/foodfy/tree/master/03_challenge-admin-foodfy) 🚧️
+3. [Admin Foody](https://github.com/jeanmontt/foodfy/tree/master/03_challenge-admin-foodfy) ✔️
 4. Persistindo dados do Foodfy 🚧️
 5. Upload de imagens 🚧️
 6. Apresentação e organização das receitas no Foodfy 🚧️
@@ -52,13 +52,22 @@ Nesta etapa foi entregue o layout e assets para realizar a construção do front
 ## 2️⃣️ [Refatorando Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy)
 
 <h1>
-<img src="assets/foodfy2.gif" alt="Gif demonstrativo challenge 1 Foodfy">
+<img src="assets/foodfy2.gif" alt="Gif demonstrativo challenge 2 Foodfy">
 </h1>
 
 Nesta etapa foi solicitado o refatoramento de algumas partes do código, criação do servidor, iniciação do banco de dados, eliminação do modal e redirecionamento para página específica da receita e inclusão de algumas funcionalidades.
 
 ---
 
+## 3️⃣ [Administração Foodfy](https://github.com/jeanmontt/foodfy/tree/master/02_challenge-refactoring-foodfy)
+
+<h1>
+<img src="assets/foodfy3.gif" alt="Gif demonstrativo challenge 3 Foodfy">
+</h1>
+
+Nesta etapa foi solicitado a criação da página administrativa do projeto com a inserção de um CRUD (Create, Read, Update and Delete) para os dados.
+
+---
 ### 🚀️ Tecnologias utilizadas:
 
 - HTML

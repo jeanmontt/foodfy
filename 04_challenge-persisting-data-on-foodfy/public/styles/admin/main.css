@@ -23,14 +23,20 @@ header {
   width: 100%;
   height: 5rem;
   background-color: var(--color-text);
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  box-sizing: border-box;
 }
 
-header .logo {
+header .container {
   width: 58.75rem;
   display: flex;
   align-items: center;
+  margin: 0 auto
+}
+
+header .logo {
+  margin-right: 3.15rem;
+  height: 1.688rem;
 }
 
 header .logo a img {
@@ -42,4 +48,46 @@ header .logo a img:hover {
   -ms-transform: scale(1.04);
   transform: scale(1.04);
   transition: 300ms;
+}
+
+header .links {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+header .links a {
+  font-size: 0.94rem;
+  line-height: 1.13rem;
+  color: #999999;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+header .links a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+header .links a:hover::after {
+  width: 100%;
+  transition: width 250ms ease-in-out 200ms;
+}
+
+header .links a:hover {
+  opacity: 0.8;
+}
+
+header .links a.active {
+  color: white;
+}
+
+header .links a:first-child {
+  margin-right: 1.88rem;
 }

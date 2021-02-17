@@ -1,13 +1,3 @@
-const cards = document.querySelectorAll('.card');
-
-for (let card of cards) {
-  card.addEventListener("click", () => {
-    recipeId = card.getAttribute('id');
-
-    window.location.href = `/receitas/${recipeId}`;
-  });
-}
-
 const content = document.querySelector('#content');
 const buttons = content.querySelectorAll('a');
 const lists = content.querySelectorAll('.list');

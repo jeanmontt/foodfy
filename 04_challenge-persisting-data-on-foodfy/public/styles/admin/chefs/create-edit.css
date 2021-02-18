@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.63rem;
+  margin-bottom: 1.88rem;
 }
 
 .header h1 {
@@ -38,7 +38,7 @@ button.save {
 button.delete {
   background-color: #DC4747;
   padding: 0.55rem 1.26rem;
-  margin: 0 10rem -2.3125rem 0;
+  margin: 0 8.5rem -2.3125rem 0;
 }
 
 button:hover {
@@ -52,9 +52,7 @@ button:hover {
   margin-bottom: 0.63rem;
 }
 
-.content input,
-.content textarea,
-.content select {
+.content input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -67,34 +65,6 @@ button:hover {
   outline-color: var(--color-button);
 }
 
-.content select {
-  background: white;
-}
-
-.content #ingredients input,
-.content #preparations input {
-  margin-bottom: 0.94rem;
-}
-
-.content .image,
-.content .title,
-.content .author {
+.content .name {
   margin-bottom: 1.88rem;
-}
-
-button.new-ingredient,
-button.new-preparation {
-  color: var(--color-button);
-  background-color: white;
-  margin-bottom: 1.88rem;
-  font-size: 1rem;
-  line-height: 1.19rem;
-  font-weight: bold;
-  outline: none;
-}
-
-.content textarea {
-  line-height: 1.5rem;
-  text-align: justify;
-  padding: 1.13rem 1.25rem;
 }

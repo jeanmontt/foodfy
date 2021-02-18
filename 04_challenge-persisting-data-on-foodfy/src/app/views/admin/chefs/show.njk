@@ -1,0 +1,84 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/admin/chefs/show.css">
+
+  <title>Foodfy - Detalhes chef Jean Monteiro</title>
+{% endblock head %}
+
+{% block content %}
+  <section class="container">
+    <div class="header">
+      <h1>Chef: Jean Monteiro</h1>
+
+      <a href="/admin/chefs/1/editar">Editar Chef</a>
+    </div>
+
+    <div class="content">
+      <div class="title">
+        <img src="/assets/photo-chef1.jpeg" alt="chef">
+
+        <h1>Jean Monteiro</h1>
+        <p>4 receitas</p>
+      </div>
+
+      <div class="recipes">
+        <h2>Receitas</h2>
+
+      <div class="cards">
+
+          <div class="card">
+              <div class="image">
+              <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="burger">          
+            </div>
+
+            <div class="info">
+              <h2>Triplo bacon burger</h2>
+              <p>por Jean Monteiro</p>
+              <a href="#">Visualizar</a>
+            </div>
+          </div>    
+
+          <div class="card">
+              <div class="image">
+              <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="burger">          
+            </div>
+
+            <div class="info">
+              <h2>Triplo bacon burger</h2>
+              <p>por Jean Monteiro</p>
+              <a href="#">Visualizar</a>
+            </div>
+          </div>    
+
+          <div class="card">
+              <div class="image">
+              <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="burger">          
+            </div>
+
+            <div class="info">
+              <h2>Triplo bacon burger</h2>
+              <p>por Jean Monteiro</p>
+              <a href="#">Visualizar</a>
+            </div>
+          </div>    
+
+          <div class="card">
+              <div class="image">
+              <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png" alt="burger">          
+            </div>
+
+            <div class="info">
+              <h2>Triplo bacon burger</h2>
+              <p>por Jean Monteiro</p>
+              <a href="#">Visualizar</a>
+            </div>
+          </div>    
+
+      </div>
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

@@ -19,9 +19,9 @@ routes.put("/admin/receitas", admin.put);
 routes.delete("/admin/receitas", admin.delete);
 
 routes.get("/admin/chefs", chefs.index);
-// routes.get("/admin/chefs/nova", chefs.create);
-// routes.get("/admin/chefs/:id", chefs.show);
-// routes.get("/admin/chefs/:id/editar", chefs.edit);
+routes.get("/admin/chefs/novo", chefs.create);
+routes.get("/admin/chefs/:id", chefs.show);
+routes.get("/admin/chefs/:id/editar", chefs.edit);
 // routes.post("/admin/chefs", chefs.post);
 // routes.put("/admin/chefs", chefs.put); 
 // routes.delete("/admin/chefs", chefs.delete);

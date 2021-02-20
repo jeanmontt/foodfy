@@ -12,31 +12,34 @@
     <title>Foodfy</title>
   </head>
 
-    <body>
+  <body>
 
-      <header>
-        <div class="logo">
-          <a href="/">
-            <img src="/assets/logo.png" alt="Foodfy">
-          </a>
-        </div>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/logo.png" alt="Foodfy">
+        </a>
+      </div>
 
-        <div class="links">
-          <a href="/sobre">Sobre</a>
-          <a href="/receitas">Receitas</a>
-        </div>
-      </header>
+      <div class="links">
+        <a href="/sobre">Sobre</a>
+        <a href="/receitas">Receitas</a>
+        <a href="/chefs">Chefs</a>
+      </div>
 
-      <main>
-        {% block content %}{% endblock content %}
-      </main>
+      {% block filter %}{% endblock filter %}
+    </header>
 
-      <footer>
-        <p>Todos direitos reservados, receitas Foodfy.</p>
-      </footer>
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
 
-      <script src="/scripts/addMenuClass.js"></script>
-      {% block scripts %}{% endblock scripts %}
-    </body>
+    <footer>
+      <p>Todos direitos reservados, receitas Foodfy.</p>
+    </footer>
 
-  </html>
+    <script src="/scripts/addMenuClass.js"></script>
+    {% block scripts %}{% endblock scripts %}
+  </body>
+
+</html>

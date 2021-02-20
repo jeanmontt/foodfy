@@ -2,7 +2,7 @@
 
 {% block head %}
   <link rel="stylesheet" href="/styles/home/recipes.css">
-
+  <link rel="stylesheet" href="/styles/home/search.css">
   <title>Foodfy - Receitas</title>
 {% endblock head %}
 
@@ -12,10 +12,14 @@
 
 {% block content %}
   <section id="content">
+    <div class="search">
+        <h1>Buscado por ""bacon""</h1>
+    </div>
+
     {% include "home/fields-recipes.njk" %}
   </section>
-
-  {% block scripts %}
-    <script src="/scripts/clickRecipeCard.js"></script>
-  {% endblock scripts %}
 {% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/clickRecipeCard.js"></script>
+{% endblock scripts %}

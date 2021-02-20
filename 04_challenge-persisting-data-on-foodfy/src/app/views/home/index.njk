@@ -6,6 +6,10 @@
   <title>Foodfy</title>
 {% endblock head %}
 
+{% block filter %}
+  {% include "home/fields-form-filter.njk" %}
+{% endblock filter %}
+
 {% block content %}
   <section id="introduction">
     <div class="info">

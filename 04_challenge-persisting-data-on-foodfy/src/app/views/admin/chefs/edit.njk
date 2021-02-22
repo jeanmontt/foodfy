@@ -3,24 +3,26 @@
 {% block head %}
   <link rel="stylesheet" href="/styles/admin/chefs/create-edit.css">
 
-  <title>Foodfy - Editando chef: Jean Monteiro</title>
+  <title>Foodfy - Editando chef:
+    {{ chef.name }}</title>
 {% endblock head %}
 
 {% block content %}
   <section class="container">
     <form class="form-delete" action="/admin/chefs?_method=DELETE" method="POST">
       <button class="delete" type="submit">Deletar</button>
-      
-      <input type="hidden" name="id" value="{{ data.id }}">
+
+      <input type="hidden" name="id" value="{{ chef.id }}">
     </form>
 
     <form action="/admin/chefs?_method=PUT" method="POST">
       <div class="header">
-        <h1>Editando chef: Jean Monteiro</h1>
+        <h1>Editando chef:
+          {{ chef.name }}</h1>
 
         <button class="save" type="submit">Salvar chef</button>
 
-        <input type="hidden" name="id" value="{{ data.id }}">
+        <input type="hidden" name="id" value="{{ chef.id }}">
       </div>
 
       {% include "admin/chefs/fields.njk" %}

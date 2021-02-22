@@ -1,41 +1,72 @@
-exports.index = (req, res) => {
+const Chef = require("../models/chef");
 
-  return res.render("admin/chefs/index");
-};
+module.exports = {
+  index(req, res) {
+    Chef.all((chefs) => {
+      return res.render("admin/chefs/index", {
+        chefs
+      });
+    });
+  },
 
-exports.create = (req, res) => {
-  res.render("admin/chefs/create");
-};
+  create(req, res) {
+    return res.render("admin/chefs/create");
+  },
 
-// exports.post = (req, res) => {
+  post(req, res) {
+    const keys = Object.keys(req.body);
 
-// return res.redirect("/admin/recipes/receitas");
-// };
+    for (key of keys) {
+      if (req.body[key] == "") {
+        return res.send("Por favor, preencha todo os campos!");
+      }
+    }
 
-exports.show = (req, res) => {
-  const recipeIndex = req.params.id;
-  const recipe = 1;
+    Chef.create(req.body, (chef) => {
+      return res.redirect(`/admin/chefs/${chef.id}`);
+    });
+  },
 
-  if (recipeIndex == recipe) {
-    return res.render("admin/chefs/show");
-  }
-};
+  show(req, res) {
+    Chef.find(req.params.id, (chef) => {
+      if (!chef) return res.send("Chef not found!");
 
-exports.edit = (req, res) => {
-  const recipeIndex = req.params.id;
-  const recipe = 1;
+      Chef.findRecipesChef(req.params.id, (recipes) => {
+        return res.render("admin/chefs/show", {
+          chef,
+          recipes_chef: recipes
+        });
+      });
+    });
+  },
 
-  if (recipeIndex == recipe) {
-    return res.render("admin/chefs/edit");
-  }
-};
+  edit(req, res) {
+    Chef.find(req.params.id, (chef) => {
+      if (!chef) return res.send("Receita não encontrada!");
 
-// exports.put = (req, res) => {
+      return res.render("admin/chefs/edit", {
+        chef
+      });
 
-// };
+    });
+  },
 
-// exports.delete = (req, res) => {
+  put(req, res) {
+    const keys = Object.keys(req.body);
+    for (key of keys) {
+      if (req.body[key] == "") {
+        return res.send("Por favor Preencha todo os campos");
+      }
+    }
 
-//   return res.redirect("/admin/recipes/receitas");
+    Chef.update(req.body, () => {
+      return res.redirect(`/admin/chefs/${req.body.id}`);
+    });
+  },
 
-// };
+  delete(req, res) {
+    Chef.delete(req.body.id, () => {
+      return res.redirect("/admin/chefs");
+    })
+  },
+}

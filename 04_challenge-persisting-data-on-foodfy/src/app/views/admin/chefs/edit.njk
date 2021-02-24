@@ -13,6 +13,7 @@
       <button class="delete" type="submit">Deletar</button>
 
       <input type="hidden" name="id" value="{{ chef.id }}">
+      <input type="hidden" id="total_recipes" name="total_recipes" value="{{chef.total_recipes}}">
     </form>
 
     <form action="/admin/chefs?_method=PUT" method="POST">
@@ -29,3 +30,7 @@
     </form>
   </section>
 {% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/chefDelete.js"></script>
+{% endblock scripts %}

@@ -2,32 +2,35 @@
   <div class="image">
     <h2>Imagem da receita</h2>
 
-    <input type="url" name="image" placeholder="http://" value="{{ data.image }}">
+    <input type="url" name="image" placeholder="http://" value="{{ recipe.image }}">
   </div>
 
   <div class="title">
     <h2>Título da receita</h2>
 
-    <input type="text" name="title" placeholder="Digite o título da receita" value="{{ data.title }}">
+    <input type="text" name="title" placeholder="Digite o título da receita" value="{{ recipe.title }}">
   </div>
 
   <div class="author">
     <h2>Chef</h2>
 
-    <select name="chef">
-      <option value="JM">Jean Monteiro</option>
+    <select name="chef_id">
+      {% for chef in chefsOptions %}
+        <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected="selected" {% endif %}>
+          {{chef.name}}
+        </option>
+      {% endfor %}
     </select>
   </div>
 
   <div id="ingredients">
     <h2>Ingredientes</h2>
 
-
-    {% for ingredient in data.ingredients %}
+    {% for ingredient in recipe.ingredients %}
       <div class="ingredient">
         <input type="text" name="ingredients[]" placeholder="Digite um igrediente por campo" value="{{ ingredient }}">
       </div>
-      {% else %}
+    {% else %}
       <div class="ingredient">
         <input type="text" name="ingredients[]" placeholder="Digite um igrediente por campo" value="">
       </div>
@@ -36,18 +39,17 @@
 
   <button type="button" class="new-ingredient">Adicionar novo ingrediente</button>
 
-
   <div id="preparations">
     <h2>Modo de preparo</h2>
 
-    {% for preparation in data.preparation %}
-    <div class="preparation">
-      <input type="text" name="preparation[]" placeholder="Digite um passo por campo" value="{{ preparation }}">
-    </div>
+    {% for preparation in recipe.preparation %}
+      <div class="preparation">
+        <input type="text" name="preparation[]" placeholder="Digite um passo por campo" value="{{ preparation }}">
+      </div>
     {% else %}
-    <div class="preparation">
-      <input type="text" name="preparation[]" placeholder="Digite um passo por campo" value="">
-    </div>
+      <div class="preparation">
+        <input type="text" name="preparation[]" placeholder="Digite um passo por campo" value="">
+      </div>
     {% endfor %}
   </div>
 
@@ -56,6 +58,8 @@
   <div class="extra_info">
     <h2>Informações adicionais</h2>
 
-    <textarea name="information" cols="30" rows="10" value="" placeholder="Digite as informações adicionais">{{ data.information }}</textarea>
+    <textarea name="information" cols="30" rows="10" value="" placeholder="Digite as informações adicionais">
+      {{ recipe.information }}
+    </textarea>
   </div>
 </div>

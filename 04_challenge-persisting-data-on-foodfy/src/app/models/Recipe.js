@@ -1,16 +1,16 @@
 const {
   date
 } = require("../../lib/utils");
-
 const db = require("../../config/db");
 
 module.exports = {
   all(callback) {
     db.query(`
-      SELECT *
-      FROM recipes
-      ORDER BY name ASC`, (err, results) => {
-      if (err) throw `Database error! ${err}`;
+      SELECT recipes.*, chefs.name AS chef_name 
+      FROM recipes  
+      LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+      ORDER BY title ASC`, (err, results) => {
+      if (err) throw `Database Error ${err}`;
 
       callback(results.rows);
     });
@@ -18,7 +18,7 @@ module.exports = {
 
   create(data, callback) {
     const query = `
-      INSERT INTO recipes (
+      INSERT INTO recipes(
         chef_id,
         image,
         title,
@@ -31,7 +31,7 @@ module.exports = {
     `;
 
     const values = [
-      data.chef,
+      data.chef_id,
       data.image,
       data.title,
       data.ingredients,
@@ -48,12 +48,17 @@ module.exports = {
   },
 
   find(id, callback) {
-    db.query(`
-      SELECT students.*, teachers.name AS teacher_name
-      FROM students 
-      LEFT JOIN teachers ON (students.teacher_id = teachers.id)
-      WHERE students.id = $1`, [id], (err, results) => {
-      if (err) throw `Database error! ${err}`;
+    const query = `
+      SELECT recipes.*, chefs.name AS chef_name
+      FROM recipes
+      LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
+      WHERE recipes.id = $1
+    `;
+
+    values = [id];
+
+    db.query(query, values, (err, results) => {
+      if (err) throw `Database error ${err}`;
 
       callback(results.rows[0]);
     });
@@ -61,90 +66,38 @@ module.exports = {
 
   update(data, callback) {
     const query = `
-      UPDATE students SET
-        name=($1),
-        avatar_url=($2),
-        email=($3),
-        birth=($4),
-        school_year=($5),
-        class_type=($6),
-        workload=($7),
-        teacher_id=($8)
-      WHERE id = $9
-    `;
+      UPDATE recipes SET
+        image = ($1),
+        chef_id = ($2),
+        title = ($3),
+        ingredients = ($4),
+        preparation = ($5),
+        information = ($6)
+        WHERE id = ($7)
+      `;
 
     const values = [
-      data.name,
-      data.avatar_url,
-      data.email,
-      data.birth,
-      data.school_year,
-      data.class_type,
-      data.workload,
-      data.teacher,
+      data.image,
+      data.chef_id,
+      data.title,
+      data.ingredients,
+      data.preparation,
+      data.information,
       data.id
     ];
 
     db.query(query, values, (err, results) => {
-      if (err) throw `Database error! ${err}`;
+      if (err) throw `Database error ${err}`;
 
-      return callback();
+      callback();
     });
   },
 
   delete(id, callback) {
-    db.query(`DELETE FROM students WHERE id = $1`, [id], (err, results) => {
-      if (err) throw `Database error! ${err}`;
-
-      return callback();
-    });
-  },
-
-  teachersSelectOptions(callback) {
-    db.query(`SELECT name, id FROM teachers`, (err, results) => {
+    db.query(`DELETE FROM recipes WHERE id = $1`, [id], (err, results) => {
       if (err) throw `Database error ${err}`;
 
-      callback(results.rows);
-    });
-  },
-
-  paginate(params) {
-    const {
-      filter,
-      limit,
-      offSet,
-      callback
-    } = params;
-
-    let query = "",
-      filterQuery = "",
-      totalQuery = `(
-        SELECT count(*) FROM students
-      ) AS total`;
-
-    if (filter) {
-      filterQuery = `
-        WHERE students.name ILIKE '%${filter}%'
-        OR students.email ILIKE '%${filter}%'
-      `;
-
-      totalQuery = `(
-       SELECT count(*) FROM students
-       ${filterQuery} 
-      ) AS total`;
-    }
-
-    query = `
-      SELECT students.*, ${totalQuery} 
-      FROM students
-      ${filterQuery}
-      LIMIT $1 OFFSET $2
-    `;
-
-    db.query(query, [limit, offSet], (err, results) => {
-      if (err) throw `Database error! ${err}`;
-
-      callback(results.rows);
+      callback();
     });
   },
 
@@ -155,4 +108,46 @@ module.exports = {
       callback(results.rows);
     });
   },
-};
+
+  paginate(params) {
+    const {
+      filter,
+      limit,
+      offset,
+      callback
+    } = params;
+
+    let query = "",
+      filterQuery = "",
+      totalQuery = `(SELECT count(*) FROM recipes) AS total`;
+
+    if (filter) {
+      filterQuery = `
+        WHERE recipes.title ILIKE '%${filter}%'
+        OR recipes.ingredients ILIKE '%${filter}%'
+      `;
+
+      totalQuery = `(
+        SELECT count(*) FROM recipes
+        ${filterQuery}
+      ) AS total`;
+    }
+
+    query = `
+      SELECT recipes.*, ${totalQuery}
+      FROM recipes
+      ${filterQuery}
+      LIMIT $1 OFFSET $2
+    `;
+
+    db.query(query, [limit, offset], (err, results) => {
+      if (err) throw `Database Error ${err}`;
+
+      if (results.rows == undefined) {
+        callback(0);
+      } else {
+        callback(resulsts.rows);
+      }
+    });
+  }
+}

@@ -8,94 +8,26 @@
 {% block content %}
   <section class="content">
     <div class="cards">
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
+      {% for chef in chefs %}
+        <div class="card">
+          <div class="image">
+            <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+          </div>
 
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
+          <div class="info">
+            <h2>{{chef.name}}</h2>
+            {% if chef.total_recipes == 1 %}
+              <p>{{chef.total_recipes}}
+                receita</p>
+            {% elif chef.total_recipes == 0%}
+              <p>Sem receitas</p>
+            {% else %}
+              <p>{{chef.total_recipes}}
+                receitas</p>
+            {% endif %}
+          </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 receitas</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="image">
-          <img src="/assets/photo-chef1.jpeg" alt="chef">
-        </div>
-
-        <div class="info">
-          <h2>Jean Monteiro</h2>
-          <p>3 recietas</p>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </section>
 {% endblock content %}

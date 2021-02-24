@@ -3,16 +3,18 @@
 {% block head %}
   <link rel="stylesheet" href="/styles/home/recipe.css">
 
-  <title>Foodfy - {{data.title}}</title>
+  <title>Foodfy -
+    {{recipe.title}}</title>
 {% endblock head %}
 
 {% block content %}
   <section id="content">
     <div class="title">
-      <img src="{{data.image}}" alt="{{data.title}}">
+      <img src="{{recipe.image}}" alt="{{recipe.title}}">
 
-      <h1>{{data.title}}</h1>
-      <p>por {{data.author}}</p>
+      <h1>{{recipe.title}}</h1>
+      <p>por
+        {{recipe.chefs_name}}</p>
     </div>
 
     <div class="ingredients">
@@ -23,37 +25,37 @@
 
       <div class="list">
         <ul>
-          {% for item in data.ingredients %}
-            <li>{{item}}</li>
+          {% for ingredient in recipe.ingredients %}
+            <li>{{ingredient}}</li>
           {% endfor %}
         </ul>
       </div>
     </div>
 
     <div class="preparation">
-        <div class="subtitle">
-          <h2>Modo de Preparo</h2>
-          <a>ESCONDER</a>
-        </div>
+      <div class="subtitle">
+        <h2>Modo de Preparo</h2>
+        <a>ESCONDER</a>
+      </div>
 
-        <div class="list">
-          <ul>
-            {% for item in data.preparation %}
-              <li>{{item}}</li>
-            {% endfor %}
-          </ul>
-        </div>
+      <div class="list">
+        <ul>
+          {% for preparation in recipe.preparation %}
+            <li>{{preparation}}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
 
     <div class="information">
-        <div class="subtitle">
-          <h2>Informações adicionais</h2>
-          <a>ESCONDER</a>
-        </div>
+      <div class="subtitle">
+        <h2>Informações adicionais</h2>
+        <a>ESCONDER</a>
+      </div>
 
-        <div class="list">
-          <p>{{data.information}}</p>
-        </div>
+      <div class="list">
+        <p>{{recipe.information}}</p>
+      </div>
     </div>
   </section>
 

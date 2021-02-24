@@ -1,4 +1,4 @@
-const Chef = require("../models/chef");
+const Chef = require("../models/Chef");
 
 module.exports = {
   index(req, res) {

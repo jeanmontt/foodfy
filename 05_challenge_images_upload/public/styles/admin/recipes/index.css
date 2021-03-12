@@ -1,0 +1,56 @@
+.content {
+  width: 58.75rem;
+  margin: 3.13rem auto 0;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.88rem;
+}
+
+.content .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.44rem;
+}
+
+.content .cards .card {
+  display: flex;
+}
+
+.content .cards .card .image img {
+  width: 10.75rem;
+  height: 5rem;
+  border-radius: 8.57px;
+  margin-right: 1.25rem;
+  box-shadow: 8px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.content .info h2 {
+  font-size: 1.13rem;
+  line-height: 1.31rem;
+  font-weight: normal;
+  margin-bottom: 0.31rem;
+}
+
+.content .info p {
+  font-size: 0.88rem;
+  line-height: 1rem;
+  color: var(--color-grey);
+  margin-bottom: 0.63rem;
+}
+
+.content .info a {
+  font-size: 0.88rem;
+  line-height: 1rem;
+  color: var(--color-button);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content .info a:hover {
+  opacity: 0.8;
+  transition: 300ms;
+}

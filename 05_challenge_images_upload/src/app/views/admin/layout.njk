@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/chef.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles/admin/main.css">
+    {% block head %}{% endblock head %}
+
+    <title>Foodfy</title>
+  </head>
+
+  <body>
+
+    <header>
+      <section class="container">
+        <div class="logo">
+          <a href="/admin/receitas">
+            <img src="/assets/logo-admin.png" alt="Foodfy">
+          </a>
+        </div>
+
+        <div class="links">
+          <a href="/admin/receitas">RECEITAS</a>
+          <a href="/admin/chefs">CHEFS</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+
+    <script src="/scripts/addMenuClass.js"></script>
+    {% block scripts %}{% endblock scripts %}
+  </body>
+
+</html>

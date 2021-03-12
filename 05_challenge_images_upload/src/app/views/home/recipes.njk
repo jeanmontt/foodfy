@@ -1,0 +1,21 @@
+{% extends "home/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/home/recipes.css">
+
+  <title>Foodfy - Receitas</title>
+{% endblock head %}
+
+{% block filter %}
+  {% include "home/fields-form-filter.njk" %}
+{% endblock filter %}
+
+{% block content %}
+  <section id="content">
+    {% include "home/fields-recipes.njk" %}
+  </section>
+{% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/clickRecipeCard.js"></script>
+{% endblock scripts %}

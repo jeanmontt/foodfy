@@ -1,0 +1,36 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/admin/chefs/create-edit.css">
+
+  <title>Foodfy - Editando chef:
+    {{ chef.name }}</title>
+{% endblock head %}
+
+{% block content %}
+  <section class="container">
+    <form class="form-delete" action="/admin/chefs?_method=DELETE" method="POST">
+      <button class="delete" type="submit">Deletar</button>
+
+      <input type="hidden" name="id" value="{{ chef.id }}">
+      <input type="hidden" id="total_recipes" name="total_recipes" value="{{chef.total_recipes}}">
+    </form>
+
+    <form action="/admin/chefs?_method=PUT" method="POST">
+      <div class="header">
+        <h1>Editando chef:
+          {{ chef.name }}</h1>
+
+        <button class="save" type="submit">Salvar chef</button>
+
+        <input type="hidden" name="id" value="{{ chef.id }}">
+      </div>
+
+      {% include "admin/chefs/fields.njk" %}
+    </form>
+  </section>
+{% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/chefDelete.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,71 @@
+#content {
+    width: 58.75rem;
+    margin: 0 auto 3.13rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3.13rem;
+}
+
+.title img {
+    border-radius: 15px;
+    margin-bottom: 3.13rem;
+    box-shadow: 8px 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.title h1 {
+    font-size: 2.25rem;
+    line-height: 2.63rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.title p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--color-grey);
+}
+
+.ingredients {
+    margin-bottom: 2.44rem;
+}
+
+.subtitle {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1.25rem;
+}
+
+.subtitle h2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.subtitle a {
+    font-size: 0.75rem;
+    line-height: 0.88rem;
+    font-weight: bold;
+    color: var(--color-grey-light);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.list {
+    font-size: 1.13rem;
+    line-height: 1.75rem;
+    color: #444444;
+}
+
+.list li {
+    margin-left: 1.5rem;
+}
+
+.preparation {
+    margin-bottom: 2.44rem;
+}

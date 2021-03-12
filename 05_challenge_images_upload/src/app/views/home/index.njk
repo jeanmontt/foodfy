@@ -1,0 +1,45 @@
+{% extends "home/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/styles/home/index.css">
+
+  <title>Foodfy</title>
+{% endblock head %}
+
+{% block filter %}
+  {% include "home/fields-form-filter.njk" %}
+{% endblock filter %}
+
+{% block content %}
+  <section id="introduction">
+    <div class="info">
+      <h1>As melhores receitas</h1>
+      <p>
+        Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="./assets/chef.png" alt="Chef Foodfy">
+    </div>
+  </section>
+
+  <section id="most_accessed">
+    <h1>Mais acessadas</h1>
+
+    <div class="cards">
+      {% for recipe in recipes %}
+        <div class="card" id="{{recipe.id}}">
+          <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+          <h1>{{ recipe.title }}</h1>
+          <p>por
+            {{ recipe.chefs_name }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock content %}
+
+{% block scripts %}
+  <script src="/scripts/clickRecipeCard.js"></script>
+{% endblock scripts %}
